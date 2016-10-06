@@ -1,0 +1,50 @@
+{
+    "name": "Bing to Google Search",
+    "version": "1.2.0",
+    "author": "Alan Files",
+    "description": "A Google Chrome extension that allows you to easily search google for what you just binged.",
+    "background": {
+        "page": "background.html",
+        "persistent": false
+    },
+    "manifest_version": 2,
+    "default_locale": "en",
+    "permissions": [
+        "tabs",
+        "contextMenus"
+    ],
+    "icons": {
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "minimum_edge_version": "33.14281.1000.0",
+    "browser_action": {
+        "default_icon": {
+            "48": "icon48.png"
+        },
+        "default_title": "Chrome to Bing Search"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "background.min.js"
+            ],
+            "matches": [
+                "*://*/*"
+            ]
+        }
+    ],
+    "commands": {
+        "searchInGoogle": {
+            "suggested_key": {
+                "default": "Alt+Shift+G",
+                "mac": "Command+Shift+G"
+            },
+            "description": "Search the current query in Google"
+        }
+    },
+    "-ms-preload": {
+        "backgroundScript": "backgroundScriptsAPIBridge.js",
+        "contentScript": "contentScriptsAPIBridge.js"
+    }
+}
