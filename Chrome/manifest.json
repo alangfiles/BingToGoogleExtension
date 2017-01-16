@@ -1,6 +1,6 @@
 {
   "name": "Bing to Google Search",
-  "version": "1.2",
+  "version": "1.3",
   "description": "A Google Chrome extension that allows you to easily search google for what you just binged.",
   "background": {
       "persistent": false,
@@ -26,6 +26,14 @@
 				"mac": "Command+Shift+G" 
 			},
 			"description" : "Search the current query in Google"
+		},
+    "searchInYoutube" : 
+		{
+			"suggested_key": {
+				"default": "Alt+Shift+Y",
+				"mac": "Command+Shift+Y" 
+			},
+			"description" : "Search the current query in Youtube"
 		}
 	}
 }

@@ -29,7 +29,7 @@ function notify(message) {
     });
 }
 
-function openPage(url, currentTabIndex){
+function openPage(url, searchUrl, currentTabIndex){
     currentTabIndex = currentTabIndex ? currentTabIndex : 1;
     var vars = [], hash;
     var hashes = url.slice(url.indexOf('?') + 1).split('&');
@@ -44,7 +44,7 @@ function openPage(url, currentTabIndex){
     if(query != undefined){
         browser.tabs.create(
             { 
-                url: "https://www.google.com/?#q="+query.replace("+"," "),
+                url: searchUrl+query.replace("+"," "),
                 index: currentTabIndex
             })
     }
