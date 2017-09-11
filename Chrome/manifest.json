@@ -1,6 +1,6 @@
 {
   "name": "Bing to Google Search",
-  "version": "1.3",
+  "version": "1.4",
   "description": "A Google Chrome extension that allows you to easily search google for what you just binged.",
   "background": {
       "persistent": false,
